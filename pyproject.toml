@@ -1,0 +1,5 @@
+[project]
+name = "harbor-tool-diff-mark"
+version = "0.1.0"
+description = "Package a Python local lab for diff analysis with windowed input fixtures, late-data behavior checks, and documented operating limits."
+requires-python = ">=3.11"
