@@ -1,0 +1,73 @@
+{
+  "repo": "harbor-tool-diff-mark",
+  "language": "Python",
+  "category": "CLI tools",
+  "goal": "Package a Python local lab for diff analysis with windowed input fixtures, late-data behavior checks, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "file span",
+      "terminal width",
+      "argument risk",
+      "report density"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "file span",
+      "signal": 55,
+      "slack": 51,
+      "drag": 27,
+      "confidence": 78,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "terminal width",
+      "signal": 75,
+      "slack": 21,
+      "drag": 25,
+      "confidence": 78,
+      "score": 174,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "argument risk",
+      "signal": 70,
+      "slack": 44,
+      "drag": 16,
+      "confidence": 53,
+      "score": 189,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "report density",
+      "signal": 87,
+      "slack": 36,
+      "drag": 9,
+      "confidence": 59,
+      "score": 242,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "file span",
+      "signal": 77,
+      "slack": 38,
+      "drag": 19,
+      "confidence": 48,
+      "score": 183,
+      "lane": "ship"
+    }
+  ]
+}
